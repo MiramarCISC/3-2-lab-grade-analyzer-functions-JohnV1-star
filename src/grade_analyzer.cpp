@@ -4,19 +4,29 @@
 using namespace std;
 
 double calculateTotal(double score1, double score2, double score3) {
-    // TODO: Return the sum of the three scores.
-    return 0.0;
+    // Return the sum of the three scores.
+    return score1 + score2 + score3;
 }
 
 double calculateAverage(double total, int count) {
-    // TODO:
+    if(count <= 0)
     // If count is less than or equal to 0, return 0.0.
     // Otherwise, return total divided by count.
     return 0.0;
+    else
+    return total / count;
 }
 
 char determineLetterGrade(double average) {
-    // TODO:
+    if(average >= A_MINIMUM)
+    return 'A';
+    if(average >= B_MINIMUM)
+    return 'B';
+    if(average >= C_MINIMUM)
+    return 'C';
+    if(average >= D_MINIMUM)
+    return 'D';
+    else
     // Return 'A' for averages 90 or higher.
     // Return 'B' for averages 80 or higher.
     // Return 'C' for averages 70 or higher.
@@ -26,12 +36,18 @@ char determineLetterGrade(double average) {
 }
 
 bool isPassing(double average) {
-    // TODO: Return true when average is 70 or higher.
+    if(average >= PASSING_MINIMUM)
+    return true;
+    else
+    // Return true when average is 70 or higher.
     return false;
 }
 
 bool isValidScore(double score) {
-    // TODO: Return true when score is between 0 and 100, inclusive.
+    if(score <= 100.0 && score >= 0.0)
+    return true;
+    else
+    // Return true when score is between 0 and 100, inclusive.
     return false;
 }
 
